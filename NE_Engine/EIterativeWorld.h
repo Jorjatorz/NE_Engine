@@ -18,5 +18,8 @@ private:
 	int max_iterations;
 	// Current number of iterations
 	int current_iteration;
+
+	// Read and process the different received commands
+	void read_process_commands();
 };
 

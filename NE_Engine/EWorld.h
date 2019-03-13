@@ -32,7 +32,8 @@ protected:
 	// List containing the JSON responds of the commands. Will be modified concurrently
 	std::list<std::string> responses_list;
 	std::mutex responses_mutex;
-	// Read and processes the coamnds in the commands list.
-	virtual void read_process_commands();
+	// Read and processes the commands in the commands list.
+	virtual std::string read_command();
+	virtual void process_command(std::string command);
 };
 

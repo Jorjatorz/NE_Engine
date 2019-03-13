@@ -67,5 +67,16 @@ void EIterativeWorld::simulate()
 			if (rand.randomFloat() < 0.10)
 				individual->mutate();
 		}
+
+		read_process_commands();
+	}
+}
+
+void EIterativeWorld::read_process_commands()
+{
+	while (!commands_list.empty())
+	{
+		std::string command = EWorld::read_command();
+		EWorld::process_command(command);
 	}
 }
